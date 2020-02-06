@@ -43,76 +43,72 @@ const PointsLayer = CC.Layer.extend({
     this._super();
 
     this.ColorL1 = this.utils.createColor(cc.color(0,54,1), 90, 350, 420, 700);
-    this.addChild(this.ColorL1,1);
+    this.addChild(this.ColorL1, 5);
 
     this.ColorL2 = this.utils.createColor(cc.color(0,54,1), 1180, 350, 355, 700);
-    this.addChild(this.ColorL2,5);
+    this.addChild(this.ColorL2, 5);
 
-    var firstRoundRect = new RoundRect(250, 200, (CC.color(243, 250, 235)), 1, (CC.color(243, 250, 235)), 7,RectType.Top,{x:180, y:5000});
-    firstRoundRect.setPosition(CP.v(30,330));
-    this.addChild(firstRoundRect,2);
+    var firstRoundRect = new RoundRect(250, 200, (CC.color(243, 250, 235)), 1, (CC.color(243, 250, 235)), 7, RectType.Top, {x:180, y:5000});
+    firstRoundRect.setPosition(CP.v(30, 330));
+    this.addChild(firstRoundRect, 5);
 
-    
-    this.firstCircle = new RoundRect(50, 50, (CC.color(48, 87, 46)), 1.2, (CC.color(48, 87, 46)), 24,RectType.Top,{x:180, y:5000});
+    this.firstCircle = new RoundRect(50, 50, (CC.color(48, 87, 46)), 1.2, (CC.color(48, 87, 46)), 24, RectType.Top, {x:180, y:5000});
     this.firstCircle.setScale(1.0);
     this.firstCircle.setOpacity(100);
-    this.addChild(this.firstCircle ,5); 
+    this.addChild(this.firstCircle, 5); 
 
+    var SmallRect1 = new RoundRect(230, 40, (CC.color(255, 247, 214)), 1.5, (CC.color(165, 105, 80)), 6, RectType.Top, {x:180, y:5000});
+    SmallRect1.setPosition(CP.v(40, 475));
+    this.addChild(SmallRect1, 5);
 
-    var SmallRect1 = new RoundRect(230, 40, (CC.color(255, 247, 214)), 1.2, (CC.color(165, 105, 80)), 6,RectType.Top,{x:180, y:5000});
-    SmallRect1.setPosition(CP.v(40,475));
-    this.addChild(SmallRect1,5);
-
-    this.Line1 = this.utils.createLine({x1:45,y1:380,x2:265,y2:380}, 0.8, CC.color(157, 96, 73));
+    this.Line1 = this.utils.createLine({x1:45, y1:380, x2:265, y2:380}, 0.8, CC.color(157, 96, 73));
     this.addChild(this.Line1, 5);
 
-    var secondRoundRect = new RoundRect(250, 200, (CC.color(243, 250, 235)), 1.2, (CC.color(243, 250, 235)), 7,RectType.Top,{x:180, y:5000});
+    var secondRoundRect = new RoundRect(250, 200, (CC.color(243, 250, 235)), 1.5, (CC.color(243, 250, 235)), 7, RectType.Top, {x:180, y:5000});
     secondRoundRect.setPosition(CP.v(1030,330));
-    this.addChild(secondRoundRect,5);
+    this.addChild(secondRoundRect, 5);
 
-    this.secondCircle = new RoundRect(50,50, (CC.color(2, 183, 17)), 0, (CC.color(2, 183, 17)), 24,RectType.Top,{x:180, y:5000});
+    this.secondCircle = new RoundRect(50, 50, (CC.color(2, 183, 17)), 0, (CC.color(2, 183, 17)), 24, RectType.Top, {x:180, y:5000});
     this.secondCircle.setScale(1.0);
     this.secondCircle.setOpacity(100);
-    this.addChild(this.secondCircle ,5); 
+    this.addChild(this.secondCircle, 5); 
  
-    var SmallRect2 = new RoundRect(230, 40, (CC.color(255, 247, 214)), 1.2, (CC.color(101,101,101)), 6,RectType.Top,{x:180, y:5000});
-    SmallRect2.setPosition(CP.v(1040,475));
-    this.addChild(SmallRect2,5);
+    var SmallRect2 = new RoundRect(230, 40, (CC.color(255, 247, 214)), 1.5, (CC.color(101, 101, 101)), 6, RectType.Top, {x:180, y:5000});
+    SmallRect2.setPosition(CP.v(1040, 475));
+    this.addChild(SmallRect2, 5);
 
-    this.Line2 = this.utils.createLine({x1:1045,y1:380,x2:1265,y2:380}, 0.8, CC.color(53, 53, 53));
+    this.Line2 = this.utils.createLine({x1:1045, y1:380, x2:1265, y2:380}, 0.8, CC.color(53, 53, 53));
     this.addChild(this.Line2, 5);
 
     this.collectedTextP1 = this.utils.createtextLabels('Coins Earned', 'Oswald', 21,
-     {x: 155, y: 487});
+     {x: 155, y: 490});
     this.collectedTextP1.setColor(CC.color(136, 80, 55));
     this.addChild(this.collectedTextP1, 5);
 
     this.collectedTextP2 = this.utils.createtextLabels('Coins Earned', 'Oswald', 21,
-     {x: 1153, y: 487});
+     {x: 1153, y: 490});
     this.collectedTextP2.setColor(CC.color(53, 53, 53));
     this.addChild(this.collectedTextP2, 6);
 
     this.totalCoinsTextP1 = this.utils.createtextLabels('Total Coins :', 'Oswald', 19,
      {x: 100, y: 350});
-     this.totalCoinsTextP1.setColor(CC.color(149,101,78));
+    this.totalCoinsTextP1.setColor(CC.color(149, 101, 78));
     this.addChild(this.totalCoinsTextP1, 5);
 
-    this.LineP1 = this.utils.createLine({x1:30,y1:550,x2:270,y2:550},1.2, CC.color(243,249,235));
+    this.LineP1 = this.utils.createLine({x1:30, y1:550, x2:270, y2:550}, 1.2, CC.color(243, 249, 235));
     this.addChild(this.LineP1, 5);
   
-    this.LineP2 = this.utils.createLine({x1:1030,y1:550,x2:1270,y2:550},1.2,CC.color(243,249,235));
+    this.LineP2 = this.utils.createLine({x1:1030, y1:550, x2:1270, y2:550}, 1.2, CC.color(243, 249, 235));
     this.addChild(this.LineP2, 5);
 
-    
-   
     this.totalCoinsTextP2 = this.utils.createtextLabels('Total Coins :', "Oswald", 19,
      {x: 1100, y: 350});
-     this.totalCoinsTextP2.setColor(CC.color(53, 53, 53));
+    this.totalCoinsTextP2.setColor(CC.color(53, 53, 53));
     this.addChild(this.totalCoinsTextP2, 5);
 
     this.P1total = this.utils.createtextLabels('0', "Oswald", 21,
      {x: 250, y: 350});
-    this.P1total.setColor(CC.color(136,80,55));
+    this.P1total.setColor(CC.color(136, 80, 55));
     this.addChild(this.P1total, 5);
 
     this.P2total = this.utils.createtextLabels('0', 'Oswald', 21,
@@ -122,8 +118,8 @@ const PointsLayer = CC.Layer.extend({
     
     this.player1Name = this.utils.createtextLabels('player1', "Oswald", 27,
      {x: 80, y: 600});
-    this.player1Name.setColor(CC.color(255,247,214));
-    this.addChild(this.player1Name,5);
+    this.player1Name.setColor(CC.color(255, 247, 214));
+    this.addChild(this.player1Name, 5);
 
    
     let player1Coin = this.setEarnedCoins('white', {x: 240, y: 600}, 200);
@@ -169,7 +165,7 @@ const PointsLayer = CC.Layer.extend({
     
     this.player2Name = this.utils.createtextLabels('player2', 'Oswald', 27,
      {x: 1220, y: 600});
-    this.player2Name.setColor(CC.color(255,247,214));
+    this.player2Name.setColor(CC.color(255, 247, 214));
     this.addChild(this.player2Name, 5);
 
     let player2Coin = this.setEarnedCoins('black', {x: 1060, y: 600}, 201);
